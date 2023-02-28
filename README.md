@@ -9,6 +9,6 @@ Students are expected to:
 Student Info
 =========================
 
-* Student Name: Nguyen Xuan Tung 
+* Student Name: Nguyễn Xuân Tùng
 * Student ID: BI12-479
 
