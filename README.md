@@ -11,4 +11,5 @@ Student Info
 
 * Student Name: Nguyễn Xuân Tùng
 * Student ID: BI12-479
+* Class: Data Science
 
