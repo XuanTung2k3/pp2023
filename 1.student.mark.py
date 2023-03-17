@@ -36,23 +36,27 @@ def select_course(student_info, course_info):
         print("Select a course to input marks: ")
         for i in range(len(course_info)):
             print("Course {}: {}".format(i+1, course_info[i][1]))
-        select = int(input("Enter your choice: "))
+        select = int(input("Enter the number of the course you want to choose: "))
         if select > len(course_info) or select < 1:
             print("Invalid choice. Please try again.")
         else:            
             for i in range(len(student_info)):
                 mark = int(input("Enter mark of {}: ".format(student_info[i][1])))
                 list_mark_course[select-1][i] = mark
-        print("Want to stop, enter 0.")
+        print("Enter 0 to stop. Enter other number to continue.")
         if int(input("Enter your choice: ")) == 0:
             break
     
     print("")
     print("List of marks of students in each course:")
     for i in range(len(course_info)):
-        print("Course: ", course_info[i][1])
+        print("Course: ", course_info[i][1], " (", course_info[i][0], ")" )
         for j in range(len(student_info)):
-            print("Student: ", student_info[j][1], "Mark: ", list_mark_course[i][j])
+            print("     Student: ", student_info[j][1])
+            print("     ID: ", student_info[j][0])
+            print("     Date of birth: ", student_info[j][2])
+            print("     Mark: ", list_mark_course[i][j])
+            print("")
         
     return list_mark_course, course_info, student_info
 
