@@ -14,7 +14,6 @@ class Base_class():
         pass
 
 
-
 class Student(Base_class):
     def __init__(self, id, name, birth, num_stu):
         super().__init__(id, name)
@@ -94,7 +93,7 @@ class Mark():
     def set_course_info(self, course_info):
         self.__course_info = course_info
     def select_course(self):
-        list_mark_course = [[None for i in range(len(self.__course_info))] for j in range(len(self.__student_info))]
+        __list_mark_course = [[None for i in range(len(self.__course_info))] for j in range(len(self.__student_info))]
         while True:
             print("Select the course you want to mark: ")
             for i in range(0,len(self.__course_info)):
@@ -106,11 +105,11 @@ class Mark():
                 print("You have selected course: ", self.__course_info[select-1][1], " (", self.__course_info[select-1][0], ")")          
                 for i in range(len(self.__student_info)):
                     mark = int(input("Enter mark of {}: ".format(self.__student_info[i][1])))
-                    list_mark_course[select-1][i] = mark
+                    __list_mark_course[select-1][i] = mark
             print("Enter 0 to stop. Enter other number to continue.")
             if int(input("Enter your choice: ")) == 0:
                 break  
-        return list_mark_course, self.__course_info, self.__student_info
+        return __list_mark_course, self.__course_info, self.__student_info
     
 def count_number_student():
     num_stu = int(input("Enter the number of student: "))
